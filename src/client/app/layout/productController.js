@@ -40,7 +40,7 @@ angular.module('app.product', ['ngMaterial'])
   vm.updatedPrice= 0;
   $scope.addcartt = function(count,price) {
     vm.updatedCart = vm.updatedCart+count;
-    vm.updatedPrice = (vm.updatedPrice+price)*count;
+    vm.updatedPrice = vm.updatedPrice+(price*count);
     console.log(updatedCart);
   };
 

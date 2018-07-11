@@ -1,12 +1,42 @@
 <div class="productSection">
   <div class="container">
-
     <div class="layout-row">
-
       <div class="products flex-25">
         <md-card class="cards">
               <div class="dialog-demo-content">
-                <a href="#" class="md-primary md-raised edgePadding" ng-click="openFromLeft()"><img ng-src="images/broccoli.png" class="md-card-image" alt="Washed Out"></a>
+                <a href="#" type="button" class="" data-toggle="modal" data-target="#exampleModal"><img ng-src="images/broccoli.png" class="md-card-image" alt="Washed Out"></a>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Brocccoli - 1kg</h5>
+                        
+                      </div>
+                      <div class="modal-body">
+                        <img ng-src="images/broccoli.png" class="md-card-image" alt="Washed Out">
+                        <p style="font-size: 18px;">Here the details of the vegetables</p>
+                        <ul>
+                          <li>price: 120tk</li>
+                          <li>Quantity: 2kg</li>
+                          <li>Quality: Medium</li>
+                          <li>tax: none</li>
+                          <li>vat: 15%</li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
               </div>
               <md-card-title>
                 <md-card-title-text>
