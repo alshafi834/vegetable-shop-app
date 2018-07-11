@@ -1,5 +1,6 @@
-<div class="productSection" ng-controller="productController">
+<div class="productSection">
   <div class="container">
+
     <div class="layout-row">
 
       <div class="products flex-25">
@@ -10,13 +11,51 @@
               <md-card-title>
                 <md-card-title-text>
                   <span><h5>Brocccoli - 1kg</h5></span>
-                  <span><h3> ৳ 120</h3></span>
+                  <span ng-init="price=120"><h3> ৳ {{price}}</h3></span>
                 </md-card-title-text>
               </md-card-title>
               <div class="amount" layout="row" layout-align="center">
-                <button>-</button>
-                <input type="text" value="1" name="">
-                <button>+</button>
+                <button ng-click="count = count-1">-</button>
+                <input type="text" value="{{count}}" name="" ng-init="count=1">
+                <button ng-click="count = count+1">+</button>
+              </div>
+              <button ng-click="addcartt(cnt,prc)" ng-init="cnt=count; prc=price">Add to Cart</button>
+              
+            </md-card>
+      </div>
+
+      <div class="products flex-25">
+        <md-card class="cards">
+              <a href="#" class="md-primary md-raised edgePadding" ng-click="openFromLeft()"><img ng-src="images/cauliflower.png" class="md-card-image" alt="Washed Out"></a>
+              <md-card-title>
+                <md-card-title-text>
+                  <span ng-init="price1=120"><h5>Cauliflower - 1kg</h5></span>
+                  <span><h3> ৳ {{price1}}</h3></span>
+                </md-card-title-text>
+              </md-card-title>
+              <div class="amount" layout="row" layout-align="center">
+                <button ng-click="count1 = count1-1">-</button>
+                <input type="text" value="{{count1}}" name="" ng-init="count1=1">
+                <button ng-click="count1 = count1+1">+</button>
+              </div>
+              <button ng-click="addcartt(cnt)" ng-init="cnt=count1; prc=price1">Add to Cart</button>
+              
+            </md-card>
+      </div>
+
+      <div class="products flex-25">
+        <md-card class="cards">
+              <a href="#" class="md-primary md-raised edgePadding" ng-click="openFromLeft()"><img ng-src="images/cucumber.png" class="md-card-image" alt="Washed Out"></a>
+              <md-card-title>
+                <md-card-title-text>
+                  <span ng-init="price2=120"><h5>Brocccoli - 1kg</h5></span>
+                  <span><h3> ৳ {{price2}}</h3></span>
+                </md-card-title-text>
+              </md-card-title>
+              <div class="amount" layout="row" layout-align="center">
+                <button ng-click="count2 = count2-1">-</button>
+                <input type="text" value="{{count2}}" name="" ng-init="count2=1">
+                <button ng-click="count2 = count2+1">+</button>
               </div>
               <button>Add to Cart</button>
               
@@ -25,55 +64,17 @@
 
       <div class="products flex-25">
         <md-card class="cards">
-              <img ng-src="images/cauliflower.png" class="md-card-image" alt="Washed Out">
+              <a href="#" class="md-primary md-raised edgePadding" ng-click="openFromLeft()"><img ng-src="images/beetroot.png" class="md-card-image" alt="Washed Out"></a>
               <md-card-title>
                 <md-card-title-text>
-                  <span><h5>Cauliflower - 1kg</h5></span>
-                  <span><h3> ৳ 60</h3></span>
+                  <span ng-init="price3=120"><h5>Brocccoli - 1kg</h5></span>
+                  <span><h3> ৳ {{price3}}</h3></span>
                 </md-card-title-text>
               </md-card-title>
               <div class="amount" layout="row" layout-align="center">
-                <button>-</button>
-                <input type="text" value="1" name="">
-                <button>+</button>
-              </div>
-              <button>Add to Cart</button>
-              
-            </md-card>
-      </div>
-
-      <div class="products flex-25">
-        <md-card class="cards">
-              <img ng-src="images/cucumber.png" class="md-card-image" alt="Washed Out">
-              <md-card-title>
-                <md-card-title-text>
-                  <span><h5>Brocccoli - 1kg</h5></span>
-                  <span><h3> ৳ 120</h3></span>
-                </md-card-title-text>
-              </md-card-title>
-              <div class="amount" layout="row" layout-align="center">
-                <button>-</button>
-                <input type="text" value="1" name="">
-                <button>+</button>
-              </div>
-              <button>Add to Cart</button>
-              
-            </md-card>
-      </div>
-
-      <div class="products flex-25">
-        <md-card class="cards">
-              <img ng-src="images/beetroot.png" class="md-card-image" alt="Washed Out">
-              <md-card-title>
-                <md-card-title-text>
-                  <span><h5>Brocccoli - 1kg</h5></span>
-                  <span><h3> ৳ 120</h3></span>
-                </md-card-title-text>
-              </md-card-title>
-              <div class="amount" layout="row" layout-align="center">
-                <button>-</button>
-                <input type="text" value="1" name="">
-                <button>+</button>
+                <button ng-click="count3 = count3-1">-</button>
+                <input type="text" value="{{count3}}" name="" ng-init="count3=1">
+                <button ng-click="count3 = count3+1">+</button>
               </div>
               <button>Add to Cart</button>
               
@@ -89,17 +90,17 @@
 
       <div class="products flex-25">
         <md-card class="cards">
-              <img ng-src="images/broccoli.png" class="md-card-image" alt="Washed Out">
+              <a href="#" class="md-primary md-raised edgePadding" ng-click="openFromLeft()"><img ng-src="images/broccoli.png" class="md-card-image" alt="Washed Out"></a>
               <md-card-title>
                 <md-card-title-text>
-                  <span><h5>Brocccoli - 1kg</h5></span>
-                  <span><h3> ৳ 120</h3></span>
+                  <span ng-init="price4=120"><h5>Brocccoli - 1kg</h5></span>
+                  <span><h3> ৳ {{price4}}</h3></span>
                 </md-card-title-text>
               </md-card-title>
               <div class="amount" layout="row" layout-align="center">
-                <button>-</button>
-                <input type="text" value="1" name="">
-                <button>+</button>
+                <button ng-click="count4 = count4-1">-</button>
+                <input type="text" value="{{count4}}" name="" ng-init="count4=1">
+                <button ng-click="count4 = count4+1">+</button>
               </div>
               <button>Add to Cart</button>
               
@@ -108,17 +109,17 @@
 
       <div class="products flex-25">
         <md-card class="cards">
-              <img ng-src="images/cauliflower.png" class="md-card-image" alt="Washed Out">
+              <a href="#" class="md-primary md-raised edgePadding" ng-click="openFromLeft()"><img ng-src="images/cauliflower.png" class="md-card-image" alt="Washed Out"></a>
               <md-card-title>
                 <md-card-title-text>
-                  <span><h5>Cauliflower - 1kg</h5></span>
-                  <span><h3> ৳ 60</h3></span>
+                  <span ng-init="price5=120"><h5>Cauliflower - 1kg</h5></span>
+                  <span><h3> ৳ {{price5}}</h3></span>
                 </md-card-title-text>
               </md-card-title>
               <div class="amount" layout="row" layout-align="center">
-                <button>-</button>
-                <input type="text" value="1" name="">
-                <button>+</button>
+                <button ng-click="count5 = count5-1">-</button>
+                <input type="text" value="{{count5}}" name="" ng-init="count5=1">
+                <button ng-click="count5 = count5+1">+</button>
               </div>
               <button>Add to Cart</button>
               
@@ -127,17 +128,17 @@
 
       <div class="products flex-25">
         <md-card class="cards">
-              <img ng-src="images/cucumber.png" class="md-card-image" alt="Washed Out">
+              <a href="#" class="md-primary md-raised edgePadding" ng-click="openFromLeft()"><img ng-src="images/cucumber.png" class="md-card-image" alt="Washed Out"></a>
               <md-card-title>
                 <md-card-title-text>
-                  <span><h5>Brocccoli - 1kg</h5></span>
-                  <span><h3> ৳ 120</h3></span>
+                  <span ng-init="price6=120"><h5>Brocccoli - 1kg</h5></span>
+                  <span><h3> ৳ {{price6}}</h3></span>
                 </md-card-title-text>
               </md-card-title>
               <div class="amount" layout="row" layout-align="center">
-                <button>-</button>
-                <input type="text" value="1" name="">
-                <button>+</button>
+                <button ng-click="count6 = count6-1">-</button>
+                <input type="text" value="{{count6}}" name="" ng-init="count6=1">
+                <button ng-click="count6 = count6+1">+</button>
               </div>
               <button>Add to Cart</button>
               
@@ -146,17 +147,17 @@
 
       <div class="products flex-25">
         <md-card class="cards">
-              <img ng-src="images/beetroot.png" class="md-card-image" alt="Washed Out">
+              <a href="#" class="md-primary md-raised edgePadding" ng-click="openFromLeft()"><img ng-src="images/beetroot.png" class="md-card-image" alt="Washed Out"></a>
               <md-card-title>
                 <md-card-title-text>
-                  <span><h5>Brocccoli - 1kg</h5></span>
-                  <span><h3> ৳ 120</h3></span>
+                  <span ng-init="price7=120"><h5>Brocccoli - 1kg</h5></span>
+                  <span><h3> ৳ {{price7}}</h3></span>
                 </md-card-title-text>
               </md-card-title>
               <div class="amount" layout="row" layout-align="center">
-                <button>-</button>
-                <input type="text" value="1" name="">
-                <button>+</button>
+                <button ng-click="count7 = count7-1">-</button>
+                <input type="text" value="{{count7}}" name="" ng-init="count7=1">
+                <button ng-click="count7 = count7+1">+</button>
               </div>
               <button>Add to Cart</button>
               
